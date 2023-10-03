@@ -31,4 +31,25 @@ Una vez creados la base de datos y el usuario, a este le tendremos que dar privi
 Una vez que he creado la base de datos, el usuario y darle a este los privilegios tendremos que salirde la base de datos, y tendremos que utilizar este comando:
  - exit
 
- 
+Despues de entrar en la consola MySQL y configurarla tendremos que comprobar la conexión a la base de datos, y tendremos que utilizar este comando:
+ - mysql -u usuario -p
+
+Despues de todo lo anterior habra que crear un nuevo directorio para poder darle permisos al directorio que hay que crear, y tendremos que utilizar estos comandos:
+ - cd /var/www/html
+
+Y para darle permisos habra que utilizar estos comandos:
+ - chmod -R 775 .
+ - chown -R root:www-data .
+
+Una vez hemos creado el directorio y le hemos añadido estos permisos, tendremos que entrar a la pagina oficial de nextcloud, tendremos que buscar arriba a la derecha donde hay tres linias y le tendremos que dar a "Get Nextcloud".
+Despues de darle nos saldran varias opciones pero le tendremos que dar a "Nextcloud Server", despues habra que descargarse el archivo de NextCloud que sale "Get ZIP file"
+
+Una vez descargado el archivo de NextCloud tendremos que poner el archivo en nuestro directorio en el cual hemos utilizado desde el principio.
+
+Despues habra que utilizar el siguiente comando para tenerlo bien que es el siguiente:
+ - sudo unzip latest.zip
+
+Luego tendremos que buscar nuestra ip, y tendremos que utilizar este comando:
+ - vagrant ssh
+
+Para poder tener nuestra ip y buscarla en google y nos saldra la opcion de crer un usario y habra que poner nuestro nombre de base de datos, nuestro usuario y la contraseña que hemos puesto
